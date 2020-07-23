@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C607E1EC24CA2287001D5258 /* DateExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607E1EB24CA2287001D5258 /* DateExtenstion.swift */; };
+		C6110CEB24CA2EAC00867056 /* TrainStationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6110CEA24CA2EAC00867056 /* TrainStationsTests.swift */; };
 		C6C677AC24C8AA8E00751B06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677AB24C8AA8E00751B06 /* AppDelegate.swift */; };
 		C6C677AE24C8AA8E00751B06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677AD24C8AA8E00751B06 /* SceneDelegate.swift */; };
 		C6C677B024C8AA8E00751B06 /* SubwayStationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677AF24C8AA8E00751B06 /* SubwayStationsViewController.swift */; };
@@ -20,8 +21,21 @@
 		C6C677C624C9E8E500751B06 /* StationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677C524C9E8E500751B06 /* StationDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C6110CED24CA2EAC00867056 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6C677A024C8AA8E00751B06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6C677A724C8AA8E00751B06;
+			remoteInfo = TrainStations;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		C607E1EB24CA2287001D5258 /* DateExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtenstion.swift; sourceTree = "<group>"; };
+		C6110CE824CA2EAC00867056 /* TrainStationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainStationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6110CEA24CA2EAC00867056 /* TrainStationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainStationsTests.swift; sourceTree = "<group>"; };
+		C6110CEC24CA2EAC00867056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6C677A824C8AA8E00751B06 /* TrainStations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainStations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C677AB24C8AA8E00751B06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6C677AD24C8AA8E00751B06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C6110CE524CA2EAC00867056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6C677A524C8AA8E00751B06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,10 +68,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6110CE924CA2EAC00867056 /* TrainStationsTests */ = {
+			isa = PBXGroup;
+			children = (
+				C6110CEA24CA2EAC00867056 /* TrainStationsTests.swift */,
+				C6110CEC24CA2EAC00867056 /* Info.plist */,
+			);
+			path = TrainStationsTests;
+			sourceTree = "<group>";
+		};
+		C6110CF224CA2ED200867056 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C607E1EB24CA2287001D5258 /* DateExtenstion.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C6110CF324CA2EE200867056 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C6C677AB24C8AA8E00751B06 /* AppDelegate.swift */,
+				C6C677AD24C8AA8E00751B06 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		C6C6779F24C8AA8E00751B06 = {
 			isa = PBXGroup;
 			children = (
 				C6C677AA24C8AA8E00751B06 /* TrainStations */,
+				C6110CE924CA2EAC00867056 /* TrainStationsTests */,
 				C6C677A924C8AA8E00751B06 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C677A824C8AA8E00751B06 /* TrainStations.app */,
+				C6110CE824CA2EAC00867056 /* TrainStationsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,8 +115,8 @@
 		C6C677AA24C8AA8E00751B06 /* TrainStations */ = {
 			isa = PBXGroup;
 			children = (
-				C6C677AB24C8AA8E00751B06 /* AppDelegate.swift */,
-				C6C677AD24C8AA8E00751B06 /* SceneDelegate.swift */,
+				C6110CF324CA2EE200867056 /* SupportingFiles */,
+				C6110CF224CA2ED200867056 /* Extensions */,
 				C6C677C824C9E90600751B06 /* NetworkServices */,
 				C6C677C924C9E91800751B06 /* Models */,
 				C6C677C724C9E8F500751B06 /* View Controllers */,
@@ -101,7 +150,6 @@
 			children = (
 				C6C677BF24C8AB1B00751B06 /* SubwayStation.swift */,
 				C6C677C124C8ABDC00751B06 /* StationDetail.swift */,
-				C607E1EB24CA2287001D5258 /* DateExtenstion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,6 +157,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C6110CE724CA2EAC00867056 /* TrainStationsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6110CF124CA2EAC00867056 /* Build configuration list for PBXNativeTarget "TrainStationsTests" */;
+			buildPhases = (
+				C6110CE424CA2EAC00867056 /* Sources */,
+				C6110CE524CA2EAC00867056 /* Frameworks */,
+				C6110CE624CA2EAC00867056 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6110CEE24CA2EAC00867056 /* PBXTargetDependency */,
+			);
+			name = TrainStationsTests;
+			productName = TrainStationsTests;
+			productReference = C6110CE824CA2EAC00867056 /* TrainStationsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C6C677A724C8AA8E00751B06 /* TrainStations */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6C677BC24C8AA9100751B06 /* Build configuration list for PBXNativeTarget "TrainStations" */;
@@ -136,6 +202,10 @@
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "casandra grullon";
 				TargetAttributes = {
+					C6110CE724CA2EAC00867056 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = C6C677A724C8AA8E00751B06;
+					};
 					C6C677A724C8AA8E00751B06 = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -155,11 +225,19 @@
 			projectRoot = "";
 			targets = (
 				C6C677A724C8AA8E00751B06 /* TrainStations */,
+				C6110CE724CA2EAC00867056 /* TrainStationsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C6110CE624CA2EAC00867056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6C677A624C8AA8E00751B06 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,6 +251,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C6110CE424CA2EAC00867056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6110CEB24CA2EAC00867056 /* TrainStationsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6C677A424C8AA8E00751B06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -189,6 +275,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6110CEE24CA2EAC00867056 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6C677A724C8AA8E00751B06 /* TrainStations */;
+			targetProxy = C6110CED24CA2EAC00867056 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C6C677B124C8AA8E00751B06 /* Main.storyboard */ = {
@@ -210,6 +304,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C6110CEF24CA2EAC00867056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JRUP55ZMLQ;
+				INFOPLIST_FILE = TrainStationsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.casandragrullon.TrainStationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainStations.app/TrainStations";
+			};
+			name = Debug;
+		};
+		C6110CF024CA2EAC00867056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JRUP55ZMLQ;
+				INFOPLIST_FILE = TrainStationsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.casandragrullon.TrainStationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainStations.app/TrainStations";
+			};
+			name = Release;
+		};
 		C6C677BA24C8AA9100751B06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -363,6 +497,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C6110CF124CA2EAC00867056 /* Build configuration list for PBXNativeTarget "TrainStationsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6110CEF24CA2EAC00867056 /* Debug */,
+				C6110CF024CA2EAC00867056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C6C677A324C8AA8E00751B06 /* Build configuration list for PBXProject "TrainStations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

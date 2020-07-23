@@ -24,14 +24,9 @@ extension String {
 extension Date {
 
     func toString(withFormat format: String = "h:mm a") -> String {
-
         let dateFormatter = DateFormatter()
-        //dateFormatter.locale = Locale(identifier: "fa-IR")
-        //dateFormatter.timeZone = TimeZone(identifier: "Asia/Tehran")
-        //dateFormatter.calendar = Calendar(identifier: .persian)
         dateFormatter.dateFormat = format
-        let str = dateFormatter.string(from: self)
-
-        return str
+        let string = dateFormatter.string(from: self)
+        return string
     }
 }
