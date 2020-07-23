@@ -83,7 +83,7 @@ class StationDetailViewController: UIViewController {
         let purple = ["7"]
         let orange = ["B", "D", "F", "M"]
         let yellow = ["N", "Q", "W", "R"]
-        let darkGreen = ["4", "5", "6", "6X"]
+        let darkGreen = ["4", "5", "6", "6X", "4X", "5X"]
         let lightGreen = ["G"]
         let grey = ["S", "L"]
         let brown = ["J", "Z"]
