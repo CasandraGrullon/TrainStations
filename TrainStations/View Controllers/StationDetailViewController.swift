@@ -126,14 +126,14 @@ extension StationDetailViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "northCell", for: indexPath)
             let route = routes[indexPath.section][indexPath.row]
             cell.textLabel?.text = "\(route.route) train"
-            cell.detailTextLabel?.text = route.time
+            cell.detailTextLabel?.text = route.time.toDate()?.toString()
             cellBackgroundColor(route: route.route, cell: cell)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "southCell", for: indexPath)
             let route = routes[indexPath.section][indexPath.row]
             cell.textLabel?.text = "\(route.route) train"
-            cell.detailTextLabel?.text = route.time
+            cell.detailTextLabel?.text = route.time.toDate()?.toString()
             cellBackgroundColor(route: route.route, cell: cell)
             return cell
         }

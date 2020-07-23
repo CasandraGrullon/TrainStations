@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C607E1EC24CA2287001D5258 /* DateExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607E1EB24CA2287001D5258 /* DateExtenstion.swift */; };
 		C6C677AC24C8AA8E00751B06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677AB24C8AA8E00751B06 /* AppDelegate.swift */; };
 		C6C677AE24C8AA8E00751B06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677AD24C8AA8E00751B06 /* SceneDelegate.swift */; };
 		C6C677B024C8AA8E00751B06 /* SubwayStationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677AF24C8AA8E00751B06 /* SubwayStationsViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C607E1EB24CA2287001D5258 /* DateExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtenstion.swift; sourceTree = "<group>"; };
 		C6C677A824C8AA8E00751B06 /* TrainStations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainStations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C677AB24C8AA8E00751B06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6C677AD24C8AA8E00751B06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				C6C677BF24C8AB1B00751B06 /* SubwayStation.swift */,
 				C6C677C124C8ABDC00751B06 /* StationDetail.swift */,
+				C607E1EB24CA2287001D5258 /* DateExtenstion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				C6C677C624C9E8E500751B06 /* StationDetailViewController.swift in Sources */,
 				C6C677AE24C8AA8E00751B06 /* SceneDelegate.swift in Sources */,
 				C6C677C024C8AB1B00751B06 /* SubwayStation.swift in Sources */,
+				C607E1EC24CA2287001D5258 /* DateExtenstion.swift in Sources */,
 				C6C677C224C8ABDC00751B06 /* StationDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

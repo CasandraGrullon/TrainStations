@@ -77,10 +77,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5Wx-zc-4Av">
-                                <rect key="frame" x="0.0" y="88" width="414" height="269"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="448"/>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Icn-LP-Tlg">
-                                <rect key="frame" x="0.0" y="357" width="414" height="505"/>
+                                <rect key="frame" x="0.0" y="536" width="414" height="326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="northCell" textLabel="dtD-rN-NYx" detailTextLabel="QCw-ym-cbU" rowHeight="144" style="IBUITableViewCellStyleValue1" id="Gx9-rE-N53">
@@ -141,7 +141,7 @@
                             <constraint firstItem="Icn-LP-Tlg" firstAttribute="trailing" secondItem="l6I-mw-9dh" secondAttribute="trailing" id="XEf-na-Nux"/>
                             <constraint firstItem="5Wx-zc-4Av" firstAttribute="leading" secondItem="l6I-mw-9dh" secondAttribute="leading" id="bhk-Jd-LNb"/>
                             <constraint firstItem="5Wx-zc-4Av" firstAttribute="top" secondItem="l6I-mw-9dh" secondAttribute="top" id="e98-XM-7XP"/>
-                            <constraint firstItem="5Wx-zc-4Av" firstAttribute="height" secondItem="W5J-ie-NsV" secondAttribute="height" multiplier="0.3" id="hbj-ng-ryi"/>
+                            <constraint firstItem="5Wx-zc-4Av" firstAttribute="height" secondItem="W5J-ie-NsV" secondAttribute="height" multiplier="0.5" id="hbj-ng-ryi"/>
                             <constraint firstItem="l6I-mw-9dh" firstAttribute="bottom" secondItem="Icn-LP-Tlg" secondAttribute="bottom" id="vDA-Jb-wcP"/>
                             <constraint firstItem="l6I-mw-9dh" firstAttribute="trailing" secondItem="5Wx-zc-4Av" secondAttribute="trailing" id="vtT-sT-9q3"/>
                         </constraints>
