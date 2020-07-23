@@ -9,27 +9,29 @@
 /* Begin PBXBuildFile section */
 		C6C677AC24C8AA8E00751B06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677AB24C8AA8E00751B06 /* AppDelegate.swift */; };
 		C6C677AE24C8AA8E00751B06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677AD24C8AA8E00751B06 /* SceneDelegate.swift */; };
-		C6C677B024C8AA8E00751B06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677AF24C8AA8E00751B06 /* ViewController.swift */; };
+		C6C677B024C8AA8E00751B06 /* SubwayStationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677AF24C8AA8E00751B06 /* SubwayStationsViewController.swift */; };
 		C6C677B324C8AA8E00751B06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C677B124C8AA8E00751B06 /* Main.storyboard */; };
 		C6C677B524C8AA9100751B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C677B424C8AA9100751B06 /* Assets.xcassets */; };
 		C6C677B824C8AA9100751B06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C677B624C8AA9100751B06 /* LaunchScreen.storyboard */; };
-		C6C677C024C8AB1B00751B06 /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677BF24C8AB1B00751B06 /* Stations.swift */; };
-		C6C677C224C8ABDC00751B06 /* ArrivalTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677C124C8ABDC00751B06 /* ArrivalTimes.swift */; };
+		C6C677C024C8AB1B00751B06 /* SubwayStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677BF24C8AB1B00751B06 /* SubwayStation.swift */; };
+		C6C677C224C8ABDC00751B06 /* StationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677C124C8ABDC00751B06 /* StationDetail.swift */; };
 		C6C677C424C8ABF100751B06 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677C324C8ABF100751B06 /* NetworkServices.swift */; };
+		C6C677C624C9E8E500751B06 /* StationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677C524C9E8E500751B06 /* StationDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C6C677A824C8AA8E00751B06 /* TrainStations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainStations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C677AB24C8AA8E00751B06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6C677AD24C8AA8E00751B06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C6C677AF24C8AA8E00751B06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6C677AF24C8AA8E00751B06 /* SubwayStationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayStationsViewController.swift; sourceTree = "<group>"; };
 		C6C677B224C8AA8E00751B06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6C677B424C8AA9100751B06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6C677B724C8AA9100751B06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6C677B924C8AA9100751B06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6C677BF24C8AB1B00751B06 /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
-		C6C677C124C8ABDC00751B06 /* ArrivalTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalTimes.swift; sourceTree = "<group>"; };
+		C6C677BF24C8AB1B00751B06 /* SubwayStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayStation.swift; sourceTree = "<group>"; };
+		C6C677C124C8ABDC00751B06 /* StationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetail.swift; sourceTree = "<group>"; };
 		C6C677C324C8ABF100751B06 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		C6C677C524C9E8E500751B06 /* StationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,16 +66,41 @@
 			children = (
 				C6C677AB24C8AA8E00751B06 /* AppDelegate.swift */,
 				C6C677AD24C8AA8E00751B06 /* SceneDelegate.swift */,
-				C6C677AF24C8AA8E00751B06 /* ViewController.swift */,
-				C6C677C324C8ABF100751B06 /* NetworkServices.swift */,
-				C6C677BF24C8AB1B00751B06 /* Stations.swift */,
-				C6C677C124C8ABDC00751B06 /* ArrivalTimes.swift */,
+				C6C677C824C9E90600751B06 /* NetworkServices */,
+				C6C677C924C9E91800751B06 /* Models */,
+				C6C677C724C9E8F500751B06 /* View Controllers */,
 				C6C677B124C8AA8E00751B06 /* Main.storyboard */,
 				C6C677B424C8AA9100751B06 /* Assets.xcassets */,
 				C6C677B624C8AA9100751B06 /* LaunchScreen.storyboard */,
 				C6C677B924C8AA9100751B06 /* Info.plist */,
 			);
 			path = TrainStations;
+			sourceTree = "<group>";
+		};
+		C6C677C724C9E8F500751B06 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6C677AF24C8AA8E00751B06 /* SubwayStationsViewController.swift */,
+				C6C677C524C9E8E500751B06 /* StationDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C6C677C824C9E90600751B06 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				C6C677C324C8ABF100751B06 /* NetworkServices.swift */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		C6C677C924C9E91800751B06 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6C677BF24C8AB1B00751B06 /* SubwayStation.swift */,
+				C6C677C124C8ABDC00751B06 /* StationDetail.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,11 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6C677C424C8ABF100751B06 /* NetworkServices.swift in Sources */,
-				C6C677B024C8AA8E00751B06 /* ViewController.swift in Sources */,
+				C6C677B024C8AA8E00751B06 /* SubwayStationsViewController.swift in Sources */,
 				C6C677AC24C8AA8E00751B06 /* AppDelegate.swift in Sources */,
+				C6C677C624C9E8E500751B06 /* StationDetailViewController.swift in Sources */,
 				C6C677AE24C8AA8E00751B06 /* SceneDelegate.swift in Sources */,
-				C6C677C024C8AB1B00751B06 /* Stations.swift in Sources */,
-				C6C677C224C8ABDC00751B06 /* ArrivalTimes.swift in Sources */,
+				C6C677C024C8AB1B00751B06 /* SubwayStation.swift in Sources */,
+				C6C677C224C8ABDC00751B06 /* StationDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

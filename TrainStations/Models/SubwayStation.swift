@@ -8,8 +8,7 @@
 
 import Foundation
 
-//actual model
-struct Station: Decodable {
+struct SubwayStation: Decodable {
     let id: String
     let name: String
     let location: [Double]

@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SubwayStationsViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableview: UITableView!
     
-    private var stations = [Station]() {
+    private var stations = [SubwayStation]() {
         didSet {
             tableview.reloadData()
         }
@@ -32,13 +32,19 @@ class ViewController: UIViewController {
                 print("could not retrieve data error: \(error)")
             case .success(let stations) :
                 DispatchQueue.main.async {
-                    self?.stations = stations
+                    self?.stations = stations.sorted(by: {$0.name < $1.name})
                 }
             }
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let stationDetailVC = segue.destination as? StationDetailViewController, let indexPath = tableview.indexPathForSelectedRow else {
+            fatalError("could not segue")
+        }
+        stationDetailVC.station = stations[indexPath.row]
+    }
 }
-extension ViewController: UITableViewDataSource {
+extension SubwayStationsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stations.count
     }
