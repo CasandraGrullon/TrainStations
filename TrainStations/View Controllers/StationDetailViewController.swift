@@ -13,18 +13,15 @@ class StationDetailViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var northTableView: UITableView!
-    
     @IBOutlet weak var southTableView: UITableView!
+    
     public var station: SubwayStation?
     
-    public var northRoute = [Schedule]() {
+    public var northRoute = [Schedule]()
+    public var southRoute = [Schedule]()
+    public var routes = [[Schedule]]() {
         didSet {
             northTableView.reloadData()
-        }
-    }
-    public var southRoute = [Schedule]() {
-        didSet {
-            southTableView.reloadData()
         }
     }
     override func viewDidLoad() {
@@ -45,6 +42,8 @@ class StationDetailViewController: UIViewController {
                     }
                     self?.northRoute = north
                     self?.southRoute = south
+                    self?.routes.append(north)
+                    self?.routes.append(south)
                     self?.navigationItem.title = stationDetails.first?.name
                 }
             }
@@ -53,43 +52,32 @@ class StationDetailViewController: UIViewController {
 }
 extension StationDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == northTableView {
-            return northRoute.count
-        } else if tableView == southTableView {
-            return southRoute.count
-        } else {
-            return 0
-        }
+        return routes[section].count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if tableView == northTableView {
+        if indexPath.section % 2 == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "northCell", for: indexPath)
-            let route = northRoute[indexPath.row]
-            cell.textLabel?.text = "\(route.route) Train"
-            cell.detailTextLabel?.text = route.time
-            return cell
-        } else if tableView == southTableView {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "southCell", for: indexPath)
-            let route = southRoute[indexPath.row]
-            cell.textLabel?.text = "\(route.route) Train"
+            let route = routes[indexPath.section][indexPath.row]
+            cell.textLabel?.text = "\(route.route) train"
             cell.detailTextLabel?.text = route.time
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "southCell", for: indexPath)
-            let route = southRoute[indexPath.row]
-            cell.textLabel?.text = "\(route.route) Train"
+            let route = routes[indexPath.section][indexPath.row]
+            cell.textLabel?.text = "\(route.route) train"
             cell.detailTextLabel?.text = route.time
             return cell
         }
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return routes.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if tableView == northTableView {
-            return "North Bound Schedule"
-        } else if tableView == southTableView {
-            return "South Bound Schedule"
+        if section == 0 {
+            return "North"
         } else {
-            return ""
+            return "South"
         }
     }
 }
