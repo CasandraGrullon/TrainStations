@@ -17,7 +17,6 @@
 		C6C677C224C8ABDC00751B06 /* StationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677C124C8ABDC00751B06 /* StationDetail.swift */; };
 		C6C677C424C8ABF100751B06 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677C324C8ABF100751B06 /* NetworkServices.swift */; };
 		C6C677C624C9E8E500751B06 /* StationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C677C524C9E8E500751B06 /* StationDetailViewController.swift */; };
-		C6EECB6724CA0B9900092EED /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EECB6624CA0B9900092EED /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		C6C677C124C8ABDC00751B06 /* StationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetail.swift; sourceTree = "<group>"; };
 		C6C677C324C8ABF100751B06 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		C6C677C524C9E8E500751B06 /* StationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailViewController.swift; sourceTree = "<group>"; };
-		C6EECB6624CA0B9900092EED /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +99,6 @@
 			children = (
 				C6C677BF24C8AB1B00751B06 /* SubwayStation.swift */,
 				C6C677C124C8ABDC00751B06 /* StationDetail.swift */,
-				C6EECB6624CA0B9900092EED /* StringExtension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,7 +175,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6C677C424C8ABF100751B06 /* NetworkServices.swift in Sources */,
-				C6EECB6724CA0B9900092EED /* StringExtension.swift in Sources */,
 				C6C677B024C8AA8E00751B06 /* SubwayStationsViewController.swift in Sources */,
 				C6C677AC24C8AA8E00751B06 /* AppDelegate.swift in Sources */,
 				C6C677C624C9E8E500751B06 /* StationDetailViewController.swift in Sources */,

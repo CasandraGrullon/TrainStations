@@ -15,10 +15,16 @@ class StationDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     public var station: SubwayStation?
-    
-    public var northRoute = [Schedule]()
-    public var southRoute = [Schedule]()
-    public var routes = [[Schedule]]() {
+    private var isShowingAnnotations = false
+    private var stationDetails = [StationDetail]() {
+        didSet {
+            loadMapView()
+        }
+    }
+    private var annotations = [MKAnnotation]()
+    private var northRoute = [Schedule]()
+    private var southRoute = [Schedule]()
+    private var routes = [[Schedule]]() {
         didSet {
             tableView.reloadData()
         }
@@ -26,9 +32,10 @@ class StationDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        mapView.showsUserLocation = false
         fetchStationDetails(id: station?.id ?? "")
     }
-    
+    //MARK:- Data
     private func fetchStationDetails(id: String) {
         APIClient.fetchStationDetails(id: id) { [weak self] (result) in
             switch result {
@@ -39,6 +46,7 @@ class StationDetailViewController: UIViewController {
                     guard let north = stationDetails.first?.north, let south = stationDetails.first?.south else {
                         return
                     }
+                    self?.stationDetails = stationDetails
                     self?.northRoute = north
                     self?.southRoute = south
                     self?.routes.append(north)
@@ -48,15 +56,36 @@ class StationDetailViewController: UIViewController {
             }
         }
     }
+    //MARK:- Map
+    private func makeAnnotations() -> [MKPointAnnotation] {
+        var annotations = [MKPointAnnotation]()
+        for station in stationDetails {
+            let annotation = MKPointAnnotation()
+            if let lat = station.location.first, let long = station.location.last {
+            let location = CLLocationCoordinate2D(latitude: lat, longitude: long)
+            annotation.coordinate = location
+            annotation.title = station.name
+            }
+            annotations.append(annotation)
+        }
+        isShowingAnnotations = true
+        self.annotations = annotations
+        return annotations
+    }
+    private func loadMapView() {
+        let annotations = makeAnnotations()
+        mapView.addAnnotations(annotations)
+        mapView.showAnnotations(annotations, animated: true)
+    }
     private func cellBackgroundColor(route: String, cell: UITableViewCell) {
         let blue = ["A", "C", "E"]
         let red = ["1", "2", "3"]
         let purple = ["7"]
         let orange = ["B", "D", "F", "M"]
         let yellow = ["N", "Q", "W", "R"]
-        let darkGreen = ["4", "5", "6"]
+        let darkGreen = ["4", "5", "6", "6X"]
         let lightGreen = ["G"]
-        let grey = ["S"]
+        let grey = ["S", "L"]
         let brown = ["J", "Z"]
         
         if blue.contains(route) {
@@ -74,11 +103,11 @@ class StationDetailViewController: UIViewController {
         } else if yellow.contains(route) {
             cell.backgroundColor = .yellow
         } else if darkGreen.contains(route) {
-            cell.backgroundColor = .green
+            cell.backgroundColor = #colorLiteral(red: 0, green: 0.7102900147, blue: 0, alpha: 1)
             cell.textLabel?.textColor = .white
             cell.detailTextLabel?.textColor = .white
         } else if lightGreen.contains(route) {
-            cell.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+            cell.backgroundColor = .green
         } else if grey.contains(route) {
             cell.backgroundColor = .lightGray
         } else if brown.contains(route) {
