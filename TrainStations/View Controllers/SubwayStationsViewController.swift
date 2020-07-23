@@ -29,6 +29,7 @@ class SubwayStationsViewController: UIViewController {
         tableview.dataSource = self
         searchBar.delegate = self
         fetchTrainStationsData()
+        navigationItem.title = "MTA Subway Tracker"
     }
     private func fetchTrainStationsData() {
         APIClient.fetchTrainStations { [weak self] (result) in
