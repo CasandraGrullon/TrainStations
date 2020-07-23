@@ -33,4 +33,28 @@ Users can search for a subway station by name and see the train schedules for th
         }
         dataTask.resume()
     }
-    ```
+```
+
+### 2. Fetching the train schedule for a particular subway station
+    ```swift
+    static func fetchStationDetails(id: String, completion: @escaping (Result<[StationDetail], Error>) -> ()) {
+        let endpointURL = "https://api.wheresthefuckingtrain.com/by-id/\(id)"
+        
+        guard let url = URL(string: endpointURL) else {
+            return
+        }
+        let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                completion(.failure(error))
+            } else if let data = data {
+                do {
+                    let resultsData = try JSONDecoder().decode(StationDetailData.self, from: data)
+                    completion(.success(resultsData.data))
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+        }
+        dataTask.resume()
+    }
+```
