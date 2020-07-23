@@ -49,6 +49,45 @@ class StationDetailViewController: UIViewController {
             }
         }
     }
+    private func cellBackgroundColor(route: String, cell: UITableViewCell) {
+        let blue = ["A", "C", "E"]
+        let red = ["1", "2", "3"]
+        let purple = ["7"]
+        let orange = ["B", "D", "F", "M"]
+        let yellow = ["N", "Q", "W", "R"]
+        let darkGreen = ["4", "5", "6"]
+        let lightGreen = ["G"]
+        let grey = ["S"]
+        let brown = ["J", "Z"]
+        
+        if blue.contains(route) {
+            cell.backgroundColor = .blue
+            cell.textLabel?.textColor = .white
+            cell.detailTextLabel?.textColor = .white
+        } else if red.contains(route) {
+            cell.backgroundColor = .red
+            cell.textLabel?.textColor = .white
+            cell.detailTextLabel?.textColor = .white
+        } else if purple.contains(route) {
+            cell.backgroundColor = #colorLiteral(red: 0.7181599736, green: 0, blue: 1, alpha: 1)
+        } else if orange.contains(route) {
+            cell.backgroundColor = .orange
+        } else if yellow.contains(route) {
+            cell.backgroundColor = .yellow
+        } else if darkGreen.contains(route) {
+            cell.backgroundColor = .green
+            cell.textLabel?.textColor = .white
+            cell.detailTextLabel?.textColor = .white
+        } else if lightGreen.contains(route) {
+            cell.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+        } else if grey.contains(route) {
+            cell.backgroundColor = .lightGray
+        } else if brown.contains(route) {
+            cell.backgroundColor = .brown
+            cell.textLabel?.textColor = .white
+            cell.detailTextLabel?.textColor = .white
+        }
+    }
 }
 extension StationDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,12 +99,14 @@ extension StationDetailViewController: UITableViewDataSource {
             let route = routes[indexPath.section][indexPath.row]
             cell.textLabel?.text = "\(route.route) train"
             cell.detailTextLabel?.text = route.time
+            cellBackgroundColor(route: route.route, cell: cell)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "southCell", for: indexPath)
             let route = routes[indexPath.section][indexPath.row]
             cell.textLabel?.text = "\(route.route) train"
             cell.detailTextLabel?.text = route.time
+            cellBackgroundColor(route: route.route, cell: cell)
             return cell
         }
     }
@@ -75,9 +116,9 @@ extension StationDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "North"
+            return "North Bound Schedule"
         } else {
-            return "South"
+            return "South Bound Schedule"
         }
     }
 }
