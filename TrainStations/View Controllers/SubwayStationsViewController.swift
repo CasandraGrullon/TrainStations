@@ -18,13 +18,18 @@ class SubwayStationsViewController: UIViewController {
             tableview.reloadData()
         }
     }
+    private var searchQuery = String() {
+        didSet {
+            stations = stations.filter {$0.name.lowercased().contains(searchQuery.lowercased())}
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview.dataSource = self
+        searchBar.delegate = self
         fetchTrainStationsData()
     }
-    
     private func fetchTrainStationsData() {
         APIClient.fetchTrainStations { [weak self] (result) in
             switch result {
@@ -42,6 +47,18 @@ class SubwayStationsViewController: UIViewController {
             fatalError("could not segue")
         }
         stationDetailVC.station = stations[indexPath.row]
+    }
+}
+extension SubwayStationsViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if (searchBar.text?.isEmpty ?? false) {
+            fetchTrainStationsData()
+        } else {
+            searchQuery = searchBar.text ?? ""
+        }
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 extension SubwayStationsViewController: UITableViewDataSource {

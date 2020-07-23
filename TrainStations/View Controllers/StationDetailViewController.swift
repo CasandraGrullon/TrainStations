@@ -12,8 +12,7 @@ import MapKit
 class StationDetailViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var northTableView: UITableView!
-    @IBOutlet weak var southTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     public var station: SubwayStation?
     
@@ -21,12 +20,12 @@ class StationDetailViewController: UIViewController {
     public var southRoute = [Schedule]()
     public var routes = [[Schedule]]() {
         didSet {
-            northTableView.reloadData()
+            tableView.reloadData()
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        northTableView.dataSource = self
+        tableView.dataSource = self
         fetchStationDetails(id: station?.id ?? "")
     }
     

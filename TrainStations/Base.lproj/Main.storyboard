@@ -150,7 +150,7 @@
                     <navigationItem key="navigationItem" id="9eV-dw-Ici"/>
                     <connections>
                         <outlet property="mapView" destination="5Wx-zc-4Av" id="IX2-ON-9zL"/>
-                        <outlet property="northTableView" destination="Icn-LP-Tlg" id="uGi-zZ-EAN"/>
+                        <outlet property="tableView" destination="Icn-LP-Tlg" id="uGi-zZ-EAN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxm-vy-eN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
